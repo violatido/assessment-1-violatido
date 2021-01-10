@@ -113,8 +113,25 @@ def every_other_item(items):
        >>> every_other_item(['a', 400, True, 'b', 0])
        ['a', True, 0]
     """
+    # sudo:
+    # turn tuple into a list
+    # use slice with a skip (2)
+    # return ['the wrong thing']
+    
+    #notes:
+        # my first instinct was to use slice with a skip (items[::2])
+            # it wasn't always effective ...
+        # i think tried using range with a skip, but it didn't have the desired results
+            # I believe that it would only return an index, not actual items
+        # i could also check for index using %, removing every index that is odd, but that is overbearing
+        # because of these issues, I consulted my notes to double check syntax for slice     
+#     evens_list = []
+#     for item in items:
+#         if item.index % 2 == 0:
+#             evens_list.append(item)
 
-    return ['the wrong thing']
+# print(every_other_item(every_other_item(['a', 400, True, 'b', 0])))
+
 
 #----------------------------------------------------------------------------------------------
 def smallest_n_items(items, n):
@@ -137,5 +154,18 @@ def smallest_n_items(items, n):
         >>> smallest_n_items([1, 1, 1, 1, 1, 1], 2)
         [1, 1]
     """
+    #sudo
+    # list.sort() will sort them in ascending order, then .reverse() to get descending order
+    # slice with n
+    # slice.reverse()
 
-    return []
+    items.sort()
+
+    items_slice = items[:n]
+    items_slice.reverse()
+
+    return items_slice
+
+print(smallest_n_items([2, 6006, 700, 42, 6, 59], 3)) # [42, 6, 2]
+print(smallest_n_items([3, 4, 5, -1, 12], 0))
+print(smallest_n_items([1, 1, 1, 1, 1, 1], 2))
