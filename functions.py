@@ -312,16 +312,10 @@ print(add_args([3, 4], 5, 6))
 
 # # Write your function here
 def create_tup(word):
-    multiplied_word = ""
 
     def multiply_word(word):
-        new_word = multiplied_word + (word * 3)
-        return new_word
-    
-    updated_word = multiply_word("hi")
-
-    word_tup = (word, updated_word)
-
-    return word_tup
+       return word * 3
+       
+    return (word, multiply_word("hi"))
 
 print(create_tup("hi"))
