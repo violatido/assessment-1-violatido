@@ -27,11 +27,11 @@ Return:
     - True or False (bool)
 """
 # my sudo:
-# globally define hometown as Fort Washington
-# declare a function that takes in a string, which is a town
-# if town equals hometown, return True
-    # considering capitalization differences, apply the title() method to town for standardization
-# otherwise, return False
+    # globally define hometown as Fort Washington
+    # declare a function that takes in a string, which is a town
+    # if town equals hometown, return True
+        # considering capitalization differences, apply the title() method to town for standardization
+    # otherwise, return False
 
 # Write your function here
 def check_hometown(town):
@@ -60,9 +60,9 @@ Return:
     - Full name (str)
 """
 # sudo:
-# declare a function that takes in two strings, a first and last name
-# return the full name by concatenating the strings
-# Write your function here
+    # declare a function that takes in two strings, a first and last name
+    # return the full name by concatenating the strings
+    # Write your function here
 def full_name(first_name, last_name):
     return first_name + " " + last_name
 
@@ -130,10 +130,10 @@ Return:
     - True or False (bool)
 """
 # sudo:
-# def function that takes in a string that is a fruit
-# create a collection of berries 
-# if fruit is in the collection, return true
-# Write your function here
+    # def function that takes in a string that is a fruit
+    # create a collection of berries 
+    # if fruit is in the collection, return true
+    # Write your function here
 
 berries = ["strawberry", "raspberry", "blueberry", "currant"]
 
@@ -159,13 +159,13 @@ print(check_berry("kfgha"))
 #     - Shipping cost (int)
 # """
 # sudo:
-# declare a function that takes in a string, which is the item to ship
-# declare a cost variable that equals 0
-# calculate how much shipping costs
-    # if item doesn't equal berry
-        # add $5 to cost
-# return shipping cost
-# # Write your function here
+    # declare a function that takes in a string, which is the item to ship
+    # declare a cost variable that equals 0
+    # calculate how much shipping costs
+        # if item doesn't equal berry
+            # add $5 to cost
+    # return shipping cost
+    # # Write your function here
 def shipping_cost(item):
     cost = 0 
     if item not in berries:
@@ -204,15 +204,15 @@ print(shipping_cost("currant"))
 #     - Total price after taxes and fees (float)
 # """
 #sudo
-# declare function that takes in base price(int), state (str), and tax percentage(float) with default of .05%
-# create total price variable of 0
-# if state is CA: total price = alter tax (tax + .03), then multiply base by new tax, then add base price
-# else if state is PA: total = caculate tax (multiply base by default tax), add 2 for fee, then add base price
-# else if state is MA:
-    # if base price is <= $100: total = calculate tax (multiply base price by default tax), then add 1 for fee, 
-        # then add base price
-    # else: total = caulcate tax (multiply base by default tax), then add 3 for fee, then add base price
-# return total 
+    # declare function that takes in base price(int), state (str), and tax percentage(float) with default of .05%
+    # create total price variable of 0
+    # if state is CA: total price = alter tax (tax + .03), then multiply base by new tax, then add base price
+    # else if state is PA: total = caculate tax (multiply base by default tax), add 2 for fee, then add base price
+    # else if state is MA:
+        # if base price is <= $100: total = calculate tax (multiply base price by default tax), then add 1 for fee, 
+            # then add base price
+        # else: total = caulcate tax (multiply base by default tax), then add 3 for fee, then add base price
+    # return total 
 
 #notes: 
     # For MA, I was not sure whether you meant to add $1 to base before or after multiplying by tax percentage
@@ -261,11 +261,12 @@ print(total_price(5, "NY", .04))
 # Return:
 #     - A list with arguments added to the end (list)
 # """
+
 # sudo
-# declare a function that takes in a list and indefinite amount of args (*args)
-# loop through the args
-    # add all additional args to the list ever iteration
-# return list
+    # declare a function that takes in a list and indefinite amount of args (*args)
+    # loop through the args
+        # add all additional args to the list ever iteration
+    # return list
 
 # # Write your function here
 def add_args(list, *args):
@@ -301,13 +302,13 @@ print(add_args([3, 4], 5, 6))
 # """
 
 # sudo: 
-# declare a function that takes in a string (word)
-# create an empty string variable
-# declare a function that takes in the word
-    # multiply the word by three
-    # return word
-# create a tuple that contains the word, the word * 3
-# return tuple
+    # declare a function that takes in a string (word)
+    # create an empty string variable
+    # declare a function that takes in the word
+        # multiply the word by three
+        # return word
+    # create a tuple that contains the word, the word * 3
+    # return tuple
 
 # # Write your function here
 def create_tup(word):
