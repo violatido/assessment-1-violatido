@@ -203,8 +203,45 @@ print(shipping_cost("currant"))
 # Return:
 #     - Total price after taxes and fees (float)
 # """
+#sudo
+# declare function that takes in base price(int), state (str), and tax percentage(float) with default of .05%
+# create total price variable of 0
+# if state is CA: total price = alter tax (tax + .03), then multiply base by new tax, then add base price
+# else if state is PA: total = caculate tax (multiply base by default tax), add 2 for fee, then add base price
+# else if state is MA:
+    # if base price is <= $100: total = calculate tax (multiply base price by default tax), then add 1 for fee, 
+        # then add base price
+    # else: total = caulcate tax (multiply base by default tax), then add 3 for fee, then add base price
+# return total 
+
+#notes: 
+    # For MA, I was not sure whether you meant to add $1 to base before or after multiplying by tax percentage
+        # based off of the pompt saying fees go after, I calculated tax and then added the fee
 
 # # Write your function here
+def total_price(base_price, state, tax_rate = .05):
+    total_taxes_fees = 1
+
+    if state == "CA":
+        total_taxes_fees = (tax_rate + 0.03) * base_price 
+    elif state == "PA":
+        total_taxes_fees = (base_price * tax_rate) + 2
+    elif state == "MA":
+        if base_price <= 100:
+            total_taxes_fees = (base_price * tax_rate) + 1
+        else:
+            total_taxes_fees = (base_price * tax_rate) + 3
+    else:
+        total_taxes_fees = (base_price * tax_rate)
+
+    return total_taxes_fees + base_price
+
+print(total_price(10, "CA", ))
+print(total_price(100, "PA", ))
+print(total_price(200, "MA", ))
+print(total_price(10, "MA", ))
+print(total_price(5, "NY", .04))
+
 
 # #-----------------------------------------------------------------------------------------------
 # """PROMPT 7
@@ -224,8 +261,19 @@ print(shipping_cost("currant"))
 # Return:
 #     - A list with arguments added to the end (list)
 # """
+# sudo
+# declare a function that takes in a list and indefinite amount of args (*args)
+# loop through the args
+    # add all additional args to the list ever iteration
+# return list
 
 # # Write your function here
+def add_args(list, *args):
+    for arg in args:
+        list.append(arg)
+    return list
+
+print(add_args([3, 4], 5, 6))
 
 # #-----------------------------------------------------------------------------------------------
 # """PROMPT 8
