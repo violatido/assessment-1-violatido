@@ -1,112 +1,112 @@
-# # Note to instructors:
-#     # I created my own sudo code above each function declaration
-#     # for better personal readibility, I sectioned off each prompt with "#----------------""
-#         # please let me know if this is not-kosher!
-#     # Where applicable, I included notes in order to communicate to you any issues or confusion I had 
+# Note to instructors:
+    # I created my own sudo code above each function declaration
+    # for better personal readibility, I sectioned off each prompt with "#----------------""
+        # please let me know if this is not-kosher!
+    # Where applicable, I included notes in order to communicate to you any issues or confusion I had 
 
-# """SKILLS: FUNCTIONS
+"""SKILLS: FUNCTIONS
 
-# Please complete the following promps.
-# """
+Please complete the following promps.
+"""
 
-# #################### PART 1 ####################
+#################### PART 1 ####################
 
-# """PROMPT 1
+"""PROMPT 1
 
-# Write a function that returns `True` if a town name matches the name of your
-# hometown.
+Write a function that returns `True` if a town name matches the name of your
+hometown.
 
-# Examples: (let's say my hometown is San Francisco)
-#     - 'Oakland' -> False
-#     - 'San Francisco' -> True
+Examples: (let's say my hometown is San Francisco)
+    - 'Oakland' -> False
+    - 'San Francisco' -> True
 
-# Arguments:
-#     - The name of a town (str)
+Arguments:
+    - The name of a town (str)
 
-# Return:
-#     - True or False (bool)
-# """
-# # my sudo:
-# # globally define hometown as Fort Washington
-# # declare a function that takes in a string, which is a town
-# # if town equals hometown, return True
-#     # considering capitalization differences, apply the title() method to town for standardization
-# # otherwise, return False
+Return:
+    - True or False (bool)
+"""
+# my sudo:
+# globally define hometown as Fort Washington
+# declare a function that takes in a string, which is a town
+# if town equals hometown, return True
+    # considering capitalization differences, apply the title() method to town for standardization
+# otherwise, return False
 
-# # Write your function here
-# def check_hometown(town):
-#     hometown = "Fort Washington"
-#     if town.title() == hometown:
-#         return True
-#     else:
-#         return False
-# print(check_hometown("Fort Washington")) #True
-# print(check_hometown("Brookyln")) #False
-# print(check_hometown("fort washington")) #True
+# Write your function here
+def check_hometown(town):
+    hometown = "Fort Washington"
+    if town.title() == hometown:
+        return True
+    else:
+        return False
+print(check_hometown("Fort Washington")) #True
+print(check_hometown("Brookyln")) #False
+print(check_hometown("fort washington")) #True
 
-# #-----------------------------------------------------------------------------------------------
-# """PROMPT 2
+#-----------------------------------------------------------------------------------------------
+"""PROMPT 2
 
-# Write a function that takes in a first and last name and returns a full name.
+Write a function that takes in a first and last name and returns a full name.
 
-# Examples:
-#     - 'Brighticorn', 'Hackbright' -> 'Brighticorn Hackbright'
+Examples:
+    - 'Brighticorn', 'Hackbright' -> 'Brighticorn Hackbright'
 
-# Arguments:
-#     - First name (str)
-#     - Last name (str)
+Arguments:
+    - First name (str)
+    - Last name (str)
 
-# Return:
-#     - Full name (str)
-# """
-# # sudo:
-# # declare a function that takes in two strings, a first and last name
-# # return the full name by concatenating the strings
-# # Write your function here
-# def full_name(first_name, last_name):
-#     return first_name + " " + last_name
+Return:
+    - Full name (str)
+"""
+# sudo:
+# declare a function that takes in two strings, a first and last name
+# return the full name by concatenating the strings
+# Write your function here
+def full_name(first_name, last_name):
+    return first_name + " " + last_name
 
-# print(full_name("Ilana", "Mercer"))
+print(full_name("Ilana", "Mercer"))
 
-# #-----------------------------------------------------------------------------------------------
-# """PROMPT 3
+#-----------------------------------------------------------------------------------------------
+"""PROMPT 3
 
-# Write a function that prints a greeting.
+Write a function that prints a greeting.
 
-# If the person is from your hometown, print
-#     Hi <full name>, we're from the same place!
+If the person is from your hometown, print
+    Hi <full name>, we're from the same place!
 
-# Otherwise, print
-#     Hi <full name>, I'd like to visit <town name>!
+Otherwise, print
+    Hi <full name>, I'd like to visit <town name>!
 
-# HINT: You can reuse the functions that you wrote in PROMPT 1 and Prompt 2.
+HINT: You can reuse the functions that you wrote in PROMPT 1 and Prompt 2.
 
-# Examples: (still assume my hometown is San Francisco)
-#     - 'Fido', 'Bark', 'Oakland' -> Hi Fido Bark, I'd like to visit Oakland!
-#     - 'Mel', 'M', 'San Francisco' -> Hi Mel M, we're from the same place!
+Examples: (still assume my hometown is San Francisco)
+    - 'Fido', 'Bark', 'Oakland' -> Hi Fido Bark, I'd like to visit Oakland!
+    - 'Mel', 'M', 'San Francisco' -> Hi Mel M, we're from the same place!
 
-# Arguments:
-#     - First name (str)
-#     - Last name (str)
-#     - Hometown (str)
-# """
-# # sudo:
-#     # declare a function that takes in three strings, first name, last name, hometown
-#     # return this greeting: Hi <full name>, I'd like to visit <town name>!
-#     # following the function, declare a hometown variable to pass into the greeting function
-#         # the value of this hometown variable will be the return of the check_hometown username
+Arguments:
+    - First name (str)
+    - Last name (str)
+    - Hometown (str)
+"""
+# sudo:
+    # declare a function that takes in three strings, first name, last name, hometown
+    # return this greeting: Hi <full name>, I'd like to visit <town name>!
+    # following the function, declare a hometown variable to pass into the greeting function
+        # the value of this hometown variable will be the return of the check_hometown username
 
-# # notes for instructor:
-#     # I had to double check the syntax for f strings very quickly. 
-#         # I understand them and have used them plenty, 
-#             # but I was accidentally placing the f within the quotes. 
-#         # I could have continued with concatenation, but that could have been ovnoxious 
-# # Write your function here
-# def greeting(full_name, hometown):
-#     return f"Hi {full_name}! I'd like to visit {hometown}!"
+# notes for instructor:
+    # I had to double check the syntax for f strings very quickly. 
+        # I understand them and have used them plenty, 
+            # but I was accidentally placing the f within the quotes. 
+        # I could have continued with concatenation, but that could have been ovnoxious 
+# Write your function here
+def greeting(full_name, hometown):
+    return f"Hi {full_name}! I'd like to visit {hometown}!"
 
-# my_name = full_name("Ilana", "Mercer")
-# print(greeting(my_name, "Fort Washington"))
+my_name = full_name("Ilana", "Mercer")
+print(greeting(my_name, "Fort Washington"))
 
 #-----------------------------------------------------------------------------------------------
 """PROMPT 4
@@ -135,9 +135,9 @@ Return:
 # if fruit is in the collection, return true
 # Write your function here
 
+berries = ["strawberry", "raspberry", "blueberry", "currant"]
 
 def check_berry(fruit):
-    berries = ["strawberry", "raspberry", "blueberry", "currant"]
     if fruit in berries:
         return True
     else:
@@ -158,8 +158,24 @@ print(check_berry("kfgha"))
 # Return:
 #     - Shipping cost (int)
 # """
-
+# sudo:
+# declare a function that takes in a string, which is the item to ship
+# declare a cost variable that equals 0
+# calculate how much shipping costs
+    # if item doesn't equal berry
+        # add $5 to cost
+# return shipping cost
 # # Write your function here
+def shipping_cost(item):
+    cost = 0 
+    if item not in berries:
+        cost = cost + 5
+    else:
+        cost = cost
+    return cost
+
+print(shipping_cost("apple"))
+print(shipping_cost("currant"))
 
 # #-----------------------------------------------------------------------------------------------
 # """PROMPT 6
