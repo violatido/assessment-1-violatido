@@ -25,11 +25,8 @@ def print_indices(items):
         cherry 2
     """
     # sudo:
-    # iterate through the list with a for loop and range()
-    # upon each iteration, print the list item followed by index
-    
-    # index in range()
-        # print(fruit index)
+        # iterate through the list with a for loop and range()
+        # upon each iteration, print the list item followed by index
 
     #notes: 
     # I'm not sure where print("Nothing at all") comes into play ...
@@ -45,7 +42,6 @@ def print_indices(items):
 
 print_indices(["apple", "berry", "cherry"])
 # print_indices("Nothing at all")
-
 
 
 #----------------------------------------------------------------------------------------------
@@ -81,14 +77,19 @@ def words_in_common(words1, words2):
         ... )
         []
     """
-    # create an empty list called shared_words
-    # for nested loop
-        # for item1 in words1
-            # for items2 in word2
-    # if item1 = item2: add to shared_words
-    # then create a set to remove repeated words
-        # set(shared_words)
-    # return set.sort()
+    #sudo
+        # create an empty list called shared_words
+        # for nested loop
+            # for item1 in words1
+                # for items2 in word2
+        # if item1 = item2: add to shared_words
+        # then create a set to remove repeated words
+            # set(shared_words)
+        # return set turned back into a list
+
+    #notes
+        # i don't know what i'm supposed to do with ['the wrong thing']
+            # it's a list, yes, but only one list item. Also, it's only one of two needed lists
 
     # return ['the wrong thing']
 
@@ -101,9 +102,9 @@ def words_in_common(words1, words2):
     
     shared_set = set(shared_words)
 
-    return shared_set
+    return list(shared_set)
 
-print(words_in_common(['apple', 'cherry', 'berry'], ['grape', 'cherry', 'banana', 'berry']))
+print(words_in_common(['apple', 'cherry', 'berry'], ['grape', 'cherry', 'banana', 'berry'])) #[cherry, berry]
 #----------------------------------------------------------------------------------------------
 def every_other_item(items):
     """Return every other item in `items`, starting at first item.
@@ -114,23 +115,24 @@ def every_other_item(items):
        ['a', True, 0]
     """
     # sudo:
-    # turn tuple into a list
-    # use slice with a skip (2)
+        # turn tuple into a list
+        # use slice with a skip (2)
+
+    #note: 
+        # i don't know what "return the wrong the is for"
+
     # return ['the wrong thing']
     
-    #notes:
-        # my first instinct was to use slice with a skip (items[::2])
-            # it wasn't always effective ...
-        # i think tried using range with a skip, but it didn't have the desired results
-            # I believe that it would only return an index, not actual items
-        # i could also check for index using %, removing every index that is odd, but that is overbearing
-        # because of these issues, I consulted my notes to double check syntax for slice     
-#     evens_list = []
-#     for item in items:
-#         if item.index % 2 == 0:
-#             evens_list.append(item)
+       
+    items_slice = items[::2]
 
-# print(every_other_item(every_other_item(['a', 400, True, 'b', 0])))
+    return items_slice
+
+print(every_other_item(['a', 400, True, 'b', 0]))
+print(every_other_item(['the wrong thing']))
+
+
+
 
 
 #----------------------------------------------------------------------------------------------
@@ -155,10 +157,12 @@ def smallest_n_items(items, n):
         [1, 1]
     """
     #sudo
-    # list.sort() will sort them in ascending order, then .reverse() to get descending order
-    # slice with n
-    # slice.reverse()
+        # list.sort() will sort them in ascending order, 
+            # then .reverse() to get descending order
+        # slice with n
+        # slice.reverse()
 
+    
     items.sort()
 
     items_slice = items[:n]
