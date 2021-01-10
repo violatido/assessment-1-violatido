@@ -300,5 +300,27 @@ print(add_args([3, 4], 5, 6))
 #     - (word, wordx3) (tuple)
 # """
 
-# # Write your function here
+# sudo: 
+# declare a function that takes in a string (word)
+# create an empty string variable
+# declare a function that takes in the word
+    # multiply the word by three
+    # return word
+# create a tuple that contains the word, the word * 3
+# return tuple
 
+# # Write your function here
+def create_tup(word):
+    multiplied_word = ""
+
+    def multiply_word(word):
+        new_word = multiplied_word + (word * 3)
+        return new_word
+    
+    updated_word = multiply_word("hi")
+
+    word_tup = (word, updated_word)
+
+    return word_tup
+
+print(create_tup("hi"))
