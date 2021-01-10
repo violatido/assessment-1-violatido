@@ -4,6 +4,8 @@
 Complete the following functions.
 """
 
+#notes: I am unsure what some of the indicated return values were supposed to mean
+    # I detailed this in other notes
 
 def print_indices(items):
     """Print each item in the list, followed by its index.
@@ -29,16 +31,18 @@ def print_indices(items):
         # upon each iteration, print the list item followed by index
 
     #notes: 
-    # I'm not sure where print("Nothing at all") comes into play ...
-        # Was I supposed to split this into a list to iterate through?
-        # Was this just a statement to print anyway?
-    # i couldn't figure out how to print individual list items along with number
-        # i tried for index, fruit in range(len(items)),
-            # because I remember doing that way keys/values in a dictionary before, but that didn't work
-    # print("Nothing at all")
+    # I did briefly look at my notes for this one
+        # i originally printed in the loop: print(items, index)
+        # i noticed that the output was close, but printed the whole list three times 
+            # rather than one item at a time
+        # From the notes, I saw that in the print statement items needed to to be items[index]
+            # I understand the logic of this though!
+    # I don't know what "Nothig at all" means in this context
+
     
     for index in range(len(items)):
-        print(items, index)
+        print(items[index], index)
+
 
 print_indices(["apple", "berry", "cherry"])
 # print_indices("Nothing at all")
