@@ -102,7 +102,11 @@ Arguments:
             # but I was accidentally placing the f within the quotes. 
         # I could have continued with concatenation, but that could have been ovnoxious 
 # Write your function here
+def greeting(full_name, hometown):
+    return f"Hi {full_name}! I'd like to visit {hometown}!"
 
+my_name = full_name("Ilana", "Mercer")
+print(greeting(my_name, "Fort Washington"))
 
 #-----------------------------------------------------------------------------------------------
 """PROMPT 4
