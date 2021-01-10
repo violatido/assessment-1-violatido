@@ -24,10 +24,31 @@ def print_indices(items):
         berry 1
         cherry 2
     """
+    # sudo:
+    # iterate through the list with a for loop and range()
+    # upon each iteration, print the list item followed by index
+    
+    # index in range()
+        # print(fruit index)
 
-    print("Nothing at all")
+    #notes: 
+    # I'm not sure where print("Nothing at all") comes into play ...
+        # Was I supposed to split this into a list to iterate through?
+        # Was this just a statement to print anyway?
+    # i couldn't figure out how to print individual list items along with number
+        # i tried for index, fruit in range(len(items)),
+            # because I remember doing that way keys/values in a dictionary before, but that didn't work
+    # print("Nothing at all")
+    
+    for index in range(len(items)):
+        print(items, index)
+
+print_indices(["apple", "berry", "cherry"])
+# print_indices("Nothing at all")
 
 
+
+#----------------------------------------------------------------------------------------------
 def words_in_common(words1, words2):
     """Return words that are shared between `words1` and `words2`.
 
@@ -60,10 +81,30 @@ def words_in_common(words1, words2):
         ... )
         []
     """
+    # create an empty list called shared_words
+    # for nested loop
+        # for item1 in words1
+            # for items2 in word2
+    # if item1 = item2: add to shared_words
+    # then create a set to remove repeated words
+        # set(shared_words)
+    # return set.sort()
 
-    return ['the wrong thing']
+    # return ['the wrong thing']
 
+    shared_words = []
 
+    for item1 in words1:
+        for item2 in words2:
+            if item1 == item2:
+                shared_words.append(item1)
+    
+    shared_set = set(shared_words)
+
+    return shared_set
+
+print(words_in_common(['apple', 'cherry', 'berry'], ['grape', 'cherry', 'banana', 'berry']))
+#----------------------------------------------------------------------------------------------
 def every_other_item(items):
     """Return every other item in `items`, starting at first item.
 
@@ -75,7 +116,7 @@ def every_other_item(items):
 
     return ['the wrong thing']
 
-
+#----------------------------------------------------------------------------------------------
 def smallest_n_items(items, n):
     """Return the `n` smallest integers in list in descending order.
 
